@@ -52,21 +52,8 @@ public class ROT13  {
     }
 
     public String decrypt(String text) {
-        Character[] charArr = text.toCharArray();
-        int shift = (int)this.cs - (int)this.cf;
-        StringBuilder sb = new StringBuilder();
 
-        for(int i=0; i<charArr.length; i++) {
-            if (isUpperCase(charArr[i])) {
-                sb.append((char) ((int) (charArr[i] + shift - 65) % 26 + 65));
-
-            } else if (isLowerCase(charArr[i])) {
-                sb.append( (char) ((int) (charArr[i] + shift - 97) % 26 + 97));
-            } else {
-                sb.append(text.charAt(i));
-            }
-        }
-        return String.valueOf(sb);
+        return null;
     }
 
     public static String rotate(String s, Character c) {

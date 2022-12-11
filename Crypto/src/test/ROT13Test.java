@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 
+
 public class ROT13Test {
 
     @Test
@@ -18,7 +19,7 @@ public class ROT13Test {
 
         // Then
        // assertTrue(actual.equals(s2));
-        assertEquals(s2, actual);
+        Assert.assertEquals(s2, actual);
     }
 
     @Test
@@ -33,7 +34,7 @@ public class ROT13Test {
         System.out.println(s1);
         System.out.println(actual);
         // Then
-        assertTrue(actual.equals(s2));
+        Assert.assertTrue(actual.equals(s2));
     }
 
     @Test
