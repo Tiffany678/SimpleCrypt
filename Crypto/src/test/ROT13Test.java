@@ -1,9 +1,10 @@
-import org.junit.Test;
 
 import static org.junit.Assert.*;
+import org.junit.Assert;
+import org.junit.Test;
+
 
 public class ROT13Test {
-
 
     @Test
     public void rotateStringTest0() {
@@ -16,7 +17,8 @@ public class ROT13Test {
         String actual = cipher.rotate(s1, 'A');
 
         // Then
-        assertTrue(actual.equals(s2));
+       // assertTrue(actual.equals(s2));
+        assertEquals(s2, actual);
     }
 
     @Test
@@ -28,7 +30,8 @@ public class ROT13Test {
         // When
         ROT13 cipher = new ROT13();
         String actual = cipher.rotate(s1, 'D');
-
+        System.out.println(s1);
+        System.out.println(actual);
         // Then
         assertTrue(actual.equals(s2));
     }
@@ -68,7 +71,7 @@ public class ROT13Test {
 
         // When
         String actual2 = cipher.decrypt(Q2);
-        System.out.println(Q2);
+        System.out.println("\n"+Q2);
         System.out.println(A2);
         // Then
         assertTrue(actual2.equals(A2));
